@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>User Data</title>
+    <title>Telegram User Data</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -29,15 +29,15 @@
 <body>
     <h1>Telegram User Data</h1>
     <div class="user-data" id="user-data">
-        <!-- Daten werden hier eingefügt -->
+        Loading data...
     </div>
 
     <script>
-        // Daten von der JSON-Datei abrufen
-        fetch('user_data.json')
+        // Daten aus der JSON-Datei oder vom Server holen
+        fetch('user_data.json') // Alternativ: URL von bot.php
             .then(response => response.json())
             .then(data => {
-                // Daten in HTML anzeigen
+                // Daten anzeigen
                 const userDataDiv = document.getElementById('user-data');
                 userDataDiv.innerHTML = `
                     <p><strong>Telegram ID:</strong> ${data.telegram_id}</p>
